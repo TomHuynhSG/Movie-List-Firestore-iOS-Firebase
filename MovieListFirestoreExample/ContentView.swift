@@ -18,8 +18,10 @@ struct ContentView: View {
             // input field for a movie name
             TextField("Enter a movie name...", text: $movie)
                 .padding()
-                .border(Color.black)
+                .border(.black)
                 .frame(width: 230, height: 40, alignment: .leading)
+                .padding()
+            
 
             // button to add a movie
             Button {
