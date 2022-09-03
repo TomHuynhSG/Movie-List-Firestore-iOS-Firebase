@@ -17,6 +17,10 @@ Here is an example how to read from and write to a cloud database Firestore usin
   <img src="https://i.imgur.com/72hZiWK.png" width="600" > 
 </p>
 
+## ⚙️ Architecture
+
+<img src="https://i.imgur.com/M8moTxp.png" width="900">
+
 ## 🔧 Build Information
 - Xcode 13.4.1
 - SwiftUI Framework
