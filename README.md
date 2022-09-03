@@ -1,6 +1,6 @@
 # Movie List with Firestore for iOS application
 
-Here is an example how to read and write from a cloud database Firestore using Firebase SDK for iOS application.
+Here is an example how to read from and write to a cloud database Firestore using Firebase SDK for iOS application.
 
 <p align="center">
   <img width="200" src="https://i.imgur.com/6jovHGu.png">
