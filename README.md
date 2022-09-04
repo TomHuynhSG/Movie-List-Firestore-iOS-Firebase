@@ -12,8 +12,8 @@ Here is an example how to read from and write to a cloud database Firestore usin
 - You can add a movie name to Firestore and see the list of movie names from Firestore.
 
 <p align="center">
-  <img src="https://i.imgur.com/NBTguGj.png" width="200" > 
-  <img src="https://i.imgur.com/pZoG63z.png" width="200" > 
+  <img src="https://i.imgur.com/NBTguGj.png" width="300" > 
+  <img src="https://i.imgur.com/pZoG63z.png" width="300" > 
   <img src="https://i.imgur.com/72hZiWK.png" width="600" > 
 </p>
 
