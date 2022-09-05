@@ -28,6 +28,8 @@ Here is an example how to read from and write to a cloud database Firestore usin
 - Library: Firebase
   - Remember to install Firebase SDK via the package manager on Xcode.
   - Also, copy your own GoogleService-Info.plist config file of your Firebase project into the Xcode project.
+  - Make sure to clear the package cache on Xcode to run this project on a new iMac/Macbook:
+    - In Xcode, run File ➜ Packages ➜ Reset Package Caches
 
 ## 🏆 Author
 - Huynh Nguyen Minh Thong (Tom Huynh) - tomhuynhsg@gmail.com
