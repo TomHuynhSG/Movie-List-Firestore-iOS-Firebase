@@ -2,7 +2,7 @@
 //  ContentView.swift
 //  MovieListFirestoreExample
 //
-//  Created by Tom Huynh on 9/3/22.
+//  Created by Tom Huynh on 04/09/2023.
 //
 
 import SwiftUI
@@ -35,14 +35,12 @@ struct ContentView: View {
             
             // List of all movies name fetched from firestore
             NavigationView {
-                List(movieViewModel.movies) { movie in
-                    VStack(alignment: .leading) {
+                List {
+                    ForEach(movieViewModel.movies, id: \.id) { movie in
                         Text(movie.name ?? "")
                     }
-                }.onAppear() {
-                    self.movieViewModel.getAllMovieData()
-                    print(movieViewModel.movies)
-                }.navigationTitle("All Movies")
+                }
+                .navigationTitle("All Movies")
             }
         }
 

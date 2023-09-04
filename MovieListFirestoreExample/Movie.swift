@@ -2,7 +2,7 @@
 //  Movie.swift
 //  MovieListFirestoreExample
 //
-//  Created by Tom Huynh on 9/3/22.
+//  Created by Tom Huynh on 04/09/2023.
 //
 
 import Foundation

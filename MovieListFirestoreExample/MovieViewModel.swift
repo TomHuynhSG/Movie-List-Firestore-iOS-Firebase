@@ -2,7 +2,7 @@
 //  MovieViewModel.swift
 //  MovieListFirestoreExample
 //
-//  Created by Tom Huynh on 9/3/22.
+//  Created by Tom Huynh on 04/09/2023.
 //
 
 import Foundation
@@ -12,6 +12,10 @@ class MovieViewModel: ObservableObject {
     @Published var movies = [Movie]()
 
     private var db = Firestore.firestore()
+    
+    init() {
+            getAllMovieData()
+    }
     
     func getAllMovieData() {
         
@@ -29,14 +33,11 @@ class MovieViewModel: ObservableObject {
                 return Movie(name: name)
             }
         }
-        
-        
     }
 
     func addNewMovieData(name: String) {
         // add a new document of a movie name in the "movies" collection
         db.collection("movies").addDocument(data: ["name": name])
-        
     }
 
 }
