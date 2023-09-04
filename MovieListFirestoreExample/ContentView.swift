@@ -39,11 +39,19 @@ struct ContentView: View {
                     ForEach(movieViewModel.movies, id: \.id) { movie in
                         Text(movie.name ?? "")
                     }
+                    .onDelete(perform: removeMovie)
                 }
                 .navigationTitle("All Movies")
             }
         }
-
+    }
+    
+    func removeMovie(at offsets: IndexSet) {
+        for index in offsets {
+            if let documentID = movieViewModel.movies[index].documentID {
+                movieViewModel.removeMovieData(documentID: documentID)
+            }
+        }
     }
 }
 

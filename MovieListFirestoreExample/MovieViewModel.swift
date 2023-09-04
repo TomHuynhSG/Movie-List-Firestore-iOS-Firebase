@@ -30,7 +30,7 @@ class MovieViewModel: ObservableObject {
             self.movies = documents.map { (queryDocumentSnapshot) -> Movie in
                 let data = queryDocumentSnapshot.data()
                 let name = data["name"] as? String ?? ""
-                return Movie(name: name)
+                return Movie(name: name, documentID: queryDocumentSnapshot.documentID)
             }
         }
     }
@@ -38,6 +38,16 @@ class MovieViewModel: ObservableObject {
     func addNewMovieData(name: String) {
         // add a new document of a movie name in the "movies" collection
         db.collection("movies").addDocument(data: ["name": name])
+    }
+    
+    func removeMovieData(documentID: String) {
+        db.collection("movies").document(documentID).delete { (error) in
+            if let error = error {
+                print("Error removing document: \(error)")
+            } else {
+                print("Document successfully removed!")
+            }
+        }
     }
 
 }
